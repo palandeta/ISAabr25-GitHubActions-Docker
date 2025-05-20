@@ -29,13 +29,13 @@ jobs:
         push: true
         tags: palandeta/isa-abr25-cicd-docker:flaskapp
 
-    - name: Deploy to Docker (Installed in Ec2)
+    - name: deploying
       uses: appleboy/ssh-action@v0.1.8
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
+        port: ${{ secrets.SSH_PORT }}   
         script: |
           docker image pull palandeta/isa-abr25-cicd-docker:flaskapp
           docker container stop flask
