@@ -40,5 +40,5 @@ jobs:
           docker image pull palandeta/isa-abr25-cicd-docker:flaskapp
           docker container stop flask
           docker container rm flask
-          docker container run -d --name flask -p 80:5000 palandeta/isa-abr25-cicd-docker:flaskpp
+          docker container run -d --name flask -p 80:5000 palandeta/isa-abr25-cicd-docker:flaskapp
         
